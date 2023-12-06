@@ -10,14 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=League+Spartan:wght@500&display=swap" rel="stylesheet">
     <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/8451556630.js" crossorigin="anonymous"></script>
 </head>
 
     <body>
         <main>
-            <section class="Cabecalho">  
+            <section class="Cabecalho" id="header">  
                 <nav class="menu">
                     <div id="logo">
-                        <img src=""/>
+                        <img src="Cat & Dog.png"/>
                     </div>
                     <section class="abas">             
                         <ul>
@@ -45,7 +46,7 @@
                     <a href="login.html"><button>Login</button></a>
                 </div>
                 <div class="imagem">
-                    <img src=""/>
+                    <img src="golden.png"/>
                 </div>
             </section>
         </main> 
@@ -53,6 +54,22 @@
             var cabecalhoLogo = document.querySelector("main section.Cabecalho .menu div#logo img");
             var Redes = document.querySelectorAll("div.redes img");
             var goldenImage = document.querySelector("div.imagem img");
+
+            window.onscroll = function () {minhaFuncao()};
+            var header = document.getElementById("header");
+            var logo = document.querySelector(".menu #logo img");
+            var sticky = header.offsetTop;
+            function minhaFuncao() {
+                if ((window.pageYOffset > sticky)) {
+                    header.classList.add("sticky");
+                    logo.classList.add("sticky");
+                }
+                else{
+                    header.classList.remove("sticky");
+                    logo.classList.remove("sticky");
+                }
+                
+            }
         </script>   
     </body>
 </html>

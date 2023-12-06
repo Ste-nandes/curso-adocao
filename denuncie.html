@@ -13,11 +13,11 @@
 
     <body>
 
-        <section class="Cabecalho">
+        <section class="Cabecalho" id="header">
            
             <nav class="menu">
                 <div id="logo">
-                    <img src=""/>
+                    <img src="Cat & Dog.png"/>
                 </div>
                 
                 <ul>
@@ -65,8 +65,24 @@
                     Ministério Público Federal: <a href="http://www.mpf.mp.br/servicos/sac">//www.mpf.mp.br/servicos/sac</a>
                     Safer Net (crimes de crueldade ou apologia aos maus-tratos na internet): <a href="https://new.safernet.org.br/denuncie"> www.safernet.org.br</a></h6>
                 
-            <img src=""/>
+            <img src="baby dog.png"/>
     </div>
     <script>
         var babyDog = document.querySelector("div.denuncie img");
+
+        window.onscroll = function () {minhaFuncao()};
+            var header = document.getElementById("header");
+            var logo = document.querySelector(".menu #logo img");
+            var sticky = header.offsetTop;
+            function minhaFuncao() {
+                if ((window.pageYOffset > sticky)) {
+                    header.classList.add("sticky");
+                    logo.classList.add("sticky");
+                }
+                else{
+                    header.classList.remove("sticky");
+                    logo.classList.remove("sticky");
+                }
+                
+            }
     </script>
